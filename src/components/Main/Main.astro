@@ -1,0 +1,56 @@
+---
+import Card from "../Card.astro";
+---
+
+<div class="flex flex-col content-center items-center m-10">
+  <img
+    src="http://localhost:4000/images/moda"
+    alt="imagen moda"
+    class="rounded-lg drop-shadow-lg"
+  />
+  <div class="line_up"></div>
+  <h1 class="section">Country Shop</h1>
+  <div class="line_down"></div>
+  <div class="flex flex-row flex-wrap content-center items-center mt-16">
+    <Card
+      title="Camisetas de temporadas"
+      text="Mira en nuestra seccion las últimas novedades de 2023"
+      url="http://localhost:4000/images/1"
+    />
+    <Card
+      title="Echa un vistazo a nuestro catálogo"
+      text="Lo último de la moda en Country Shop a tu disposición"
+      url="http://localhost:4000/images/2"
+    />
+    <Card
+      title="Los mejores complementos"
+      text="Combina lo mejor de tí con tus mejores accesorios"
+      url="http://localhost:4000/images/3"
+    />
+  </div>
+  <div class="line_up"></div>
+  <h1 class="section">Secciones</h1>
+  <div class="line_down"></div>
+</div>
+
+<style>
+  .line_up {
+    background-color: #b11a1a;
+    height: 6px;
+    width: 25rem;
+    margin-top: 3rem;
+  }
+  .line_down {
+    background-color: #b11a1a;
+    height: 6px;
+    width: 16rem;
+    margin-top: 1rem;
+  }
+
+  .section {
+    padding: 0;
+    margin: 0;
+    font-weight: 900;
+    font-size: 50px;
+  }
+</style>
