@@ -1,0 +1,11 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Galery from "../components/catalogo/Galery";
+import Browser from "../components/catalogo/Browser";
+---
+
+<Layout title="Country Shop">
+  <main class="flex flex-row">
+    <Galery client:load />
+  </main>
+</Layout>
