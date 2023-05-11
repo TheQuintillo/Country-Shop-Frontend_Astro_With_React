@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import GalleryData from "./GalleryData";
+import "./Media.css";
 
 interface GalleryItem {
   id: number;
@@ -14,7 +15,6 @@ function Galery() {
   useEffect(() => {
     setData(GalleryData);
     setCollection([...new Set(GalleryData.map((item) => item.title))]);
-    console.log(data);
   }, []);
 
   const galleryFilter = (itemData: string) => {
@@ -24,8 +24,13 @@ function Galery() {
 
   return (
     <>
-      <div className="">
-        <div className="flex flex-row content-center gap-36 m-8">
+      <div
+        className=""
+        style={{
+          margin: "0px auto",
+        }}
+      >
+        <div className="container_gallery flex flex-row content-center flex-wrap gap-8 m-8">
           <div className="ml-10">
             <ul>
               <h1 className="ml-5 mb-2  font-bold">Filtrar</h1>

@@ -21,7 +21,6 @@ function NavBar() {
     const jsonData = await response.json();
     if (jsonData) {
       setUser(jsonData);
-      console.log(jsonData);
     }
   };
   useEffect(() => {

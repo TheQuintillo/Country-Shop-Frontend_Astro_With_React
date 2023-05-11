@@ -1,0 +1,13 @@
+@media screen and (max-width: 1458px) {
+  .container_gallery li {
+    display: inline-block;
+    text-align: center;
+  }
+  .container_gallery {
+    display: flex;
+    justify-content: center;
+  }
+  ul {
+    text-align: center;
+  }
+}
