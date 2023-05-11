@@ -58,7 +58,7 @@ function Galery() {
               ))}
             </ul>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="container_img grid grid-cols-2 justify-center items-center md:grid-cols-3 gap-4">
             {data.map((item) => {
               return (
                 <div>
