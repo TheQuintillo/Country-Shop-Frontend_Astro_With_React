@@ -1,6 +1,7 @@
 import useValidator from "./useValidator";
 function Registro() {
   const {
+    error,
     setEmail,
     setName,
     setPassword,
@@ -14,7 +15,7 @@ function Registro() {
         className="container_form"
         style={{
           margin: "4rem auto",
-          height: "45em",
+          height: "46.8em",
         }}
       >
         <h1>Registro</h1>
@@ -116,6 +117,7 @@ function Registro() {
           >
             Submit
           </button>
+          {error ? <p>{error}</p> : ""}
         </form>
       </div>
     </>

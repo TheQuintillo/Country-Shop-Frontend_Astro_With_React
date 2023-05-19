@@ -6,9 +6,16 @@ function useValidator() {
   const [password, setPassword] = useState("");
   const [repeatPassword, setRepeatPassword] = useState("");
   const [repeatEmail, setRepeatEmail] = useState("");
+  const [error, setError] = useState<string>("");
 
   const validator = Joi.object({
-    name: Joi.string().alphanum().min(3).max(30).required(),
+    // any.messages({}) For custom message
+    name: Joi.string().min(3).max(30).required().messages({
+      "string.alphanum": "Solo caracteres alfanuméricos",
+      "string.min": "El nombre debe tener al menos {#limit} caracteres",
+      "string.max": "El nombre no puede tener más de {#limit} caracteres",
+      "any.required": "El nombre es obligatorio",
+    }),
     email: Joi.string()
       .email({ minDomainSegments: 2, tlds: { allow: ["com", "net"] } })
       .required(),
@@ -25,16 +32,17 @@ function useValidator() {
       repeat_email: repeatEmail,
       repeat_password: repeatPassword,
     };
-    const { error } = validator.validate(formDataname);
+    const { error } = validator.validate(formDataname, { abortEarly: true });
     if (!error) {
       e.currentTarget.action = "http://localhost:4000/register";
       e.currentTarget.submit();
     } else {
-      console.log(error.message);
+      setError(error.message);
     }
   };
 
   return {
+    error,
     setEmail,
     setName,
     setPassword,
