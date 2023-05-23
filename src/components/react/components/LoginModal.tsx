@@ -2,7 +2,7 @@ import GoogleButton from "react-google-button";
 
 function LoginModal() {
   const redirectToGoogleSSO = async () => {
-    let timer: number | null = null;
+    let timer: NodeJS.Timeout | null = null;
     const url = "http://localhost:4000/login_google/auth/google/";
     const width = 500;
     const height = 600;

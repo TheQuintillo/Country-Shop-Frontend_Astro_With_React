@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import LoginModal from "./LoginModal";
+import Cookies from "universal-cookie";
 
 interface User {
   id: number;
