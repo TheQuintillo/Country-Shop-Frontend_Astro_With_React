@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import LoginModal from "./LoginModal";
-import Cookies from "universal-cookie";
 
 interface User {
   id: number;
+  name: string;
   fullName: string;
   email: string;
   googleId: string;
@@ -25,6 +25,13 @@ function NavBar() {
       setUser(jsonData);
     }
   };
+  /*const requestUserJWT = async () => {
+    const response = await fetch("http://localhost:4000/login", {});
+    const jsonData = await response.json();
+    if (jsonData.msg !== "Email and password son requeridos") {
+      setUser(jsonData);
+    }
+  };*/
   useEffect(() => {
     requestUser();
   }, []);
@@ -54,7 +61,7 @@ function NavBar() {
               <span className="sr-only">Open user menu</span>
               <img
                 className="w-8 h-8 rounded-full"
-                src={user.picture}
+                src={user.picture ? user.picture : ""}
                 alt="user photo"
               />
             </button>
@@ -64,7 +71,7 @@ function NavBar() {
             >
               <div className="px-4 py-3">
                 <span className="block text-sm text-gray-900 dark:text-white">
-                  {user.fullName}
+                  {user.fullName ? user.fullName : user.name}
                 </span>
                 <span className="block text-sm  text-gray-500 truncate dark:text-gray-400">
                   {user.email}

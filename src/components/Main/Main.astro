@@ -8,9 +8,10 @@ import Card from "../Card.astro";
     alt="imagen moda"
     class="rounded-lg drop-shadow-lg"
   />
-  <div class="line_up"></div>
-  <h1 class="section">Country Shop</h1>
-  <div class="line_down"></div>
+  <div class="bg-red-800 h-1 w-36 mt-10 mb-3"></div>
+  <h1 class="p-0 m-0 font-bold text-5xl">Country Shop</h1>
+
+  <div class="bg-red-800 h-1 w-60 mt-6"></div>
   <div class="flex flex-row flex-wrap justify-center items-center mt-16">
     <Card
       title="Camisetas de temporadas"
@@ -28,27 +29,27 @@ import Card from "../Card.astro";
       url="http://localhost:4000/images/3"
     />
   </div>
-  <div class="line_up"></div>
-  <h1 class="section">Secciones</h1>
-  <div class="line_down"></div>
+  <div class="bg-red-800 h-1 w-36 mb-3 mt-10"></div>
+  <h1 class="p-0 m-0 font-bold text-5xl">Secciones</h1>
+  <div class="bg-red-800 h-1 w-60 mt-5"></div>
   <div class="flex flex-row flex-wrap gap-10 content-center items-center mt-12">
     <div
       class="flex flex-col justify-center items-center bg-cover bg-top h-28 w-96"
       style="background-image: url('http://localhost:4000/images/hombre')"
     >
-      <h1 class="section text-red-500">Hombre</h1>
+      <h1 class="text-red-500 p-0 m-0 font-bold text-5xl">Hombre</h1>
     </div>
     <div
       class="flex flex-col justify-center items-center bg-cover bg-center h-28 w-96"
       style=`background-image: url("http://localhost:4000/images/accesorios")`
     >
-      <h1 class="section text-red-500">Accesorios</h1>
+      <h1 class="text-red-500 p-0 m-0 font-bold text-5xl">Accesorios</h1>
     </div>
     <div
       class="flex flex-col justify-center items-center bg-cover bg-center h-28 w-96"
       style=`background-image: url("http://localhost:4000/images/mujer")`
     >
-      <h1 class="section text-red-500">Mujer</h1>
+      <h1 class="text-red-500 p-0 m-0 font-bold text-5xl">Mujer</h1>
     </div>
   </div>
 </div>
@@ -132,26 +133,4 @@ import Card from "../Card.astro";
       </form>
     </div>
   </section>
-
-  <style>
-    .line_up {
-      background-color: #b11a1a;
-      height: 6px;
-      width: 25rem;
-      margin-top: 3rem;
-    }
-    .line_down {
-      background-color: #b11a1a;
-      height: 6px;
-      width: 16rem;
-      margin-top: 1rem;
-    }
-
-    .section {
-      padding: 0;
-      margin: 0;
-      font-weight: 900;
-      font-size: 50px;
-    }
-  </style>
 </div>
